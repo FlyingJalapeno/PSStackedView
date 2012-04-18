@@ -116,7 +116,6 @@ typedef void(^PSSVSimpleBlock)(void);
         [self popViewControllerAnimated:NO];
     }
     
-    [super dealloc];
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -623,7 +622,7 @@ enum {
         }
     }];
     
-    return [[array copy] autorelease];
+    return [array copy];
 }
 
 
@@ -1025,7 +1024,6 @@ enum {
             finishBlock();
         }
         
-        [[[viewControllers_ lastObject] retain] autorelease];
         [viewControllers_ removeLastObject];        
         
         // save current stack controller as an associated object.

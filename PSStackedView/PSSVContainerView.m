@@ -74,13 +74,12 @@
 + (PSSVContainerView *)containerViewWithController:(UIViewController *)controller; {
     PSSVContainerView *view = [[PSSVContainerView alloc] initWithFrame:controller.view.frame];
     view.controller = controller;    
-    return [view autorelease];
+    return view;
 }
 
 - (void)dealloc {
     [self removeMask];
     self.shadow = PSSVSideNone; // TODO needed?
-    [super dealloc];
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
