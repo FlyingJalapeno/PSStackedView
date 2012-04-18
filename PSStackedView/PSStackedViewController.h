@@ -77,7 +77,7 @@ enum {
 - (NSInteger)indexOfViewController:(UIViewController *)viewController;
 
 /// event delegate
-@property(nonatomic, unsafe_unretained) id<PSStackedViewDelegate> delegate;
+@property(nonatomic, weak) id<PSStackedViewDelegate> delegate;
 
 /// root view controller, always displayed behind stack
 @property(nonatomic, strong, readonly) UIViewController *rootViewController;
